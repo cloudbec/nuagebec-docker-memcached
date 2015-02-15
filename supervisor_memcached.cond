@@ -1,8 +1,17 @@
 [program:memcached]
-command=/usr/local/bin/memcached -p 11211 -u memcached -m 256 -c 1024 -t 4
+command=/usr/bin/memcached -p 11211 -u root -m 256 -c 1024 -t 4
 autostart=true
 autorestart=true
 user=root
 priority=100
 redirect_stderr=true
 stdout_logfile=/var/log/memcached/stdout.log 
+
+
+autostart=true
+autorestart=true
+startsecs=3
+; Need to wait for currently executing tasks to finish at shutdown.
+; Increase this if you have very long running tasks.
+stopwaitsecs = 3
+numprocs=1

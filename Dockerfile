@@ -1,4 +1,4 @@
-FROM nuagebec/ubuntu
+FROM nuagebec/ubuntu:latest
 MAINTAINER David Tremblay <david@nuagebec.ca>
 
 #install memcached
@@ -9,6 +9,9 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 ADD supervisor_memcached.cond /etc/supervisor/conf.d/memcached.conf 
+
+RUN mkdir /var/log/memcached/
+RUN useradd memcached
 
 EXPOSE 11211
 CMD ["/data/run.sh"]
