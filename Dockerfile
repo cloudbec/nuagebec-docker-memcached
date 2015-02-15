@@ -16,5 +16,3 @@ RUN useradd memcached
 EXPOSE 11211
 CMD ["/data/run.sh"]
 
-
-
