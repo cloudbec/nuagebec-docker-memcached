@@ -8,7 +8,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-ADD supervisor_memcached.cond /etc/supervisor/conf.d/supervisor-memcached.conf 
+ADD supervisor_memcached.cond /etc/supervisor/conf.d/memcached.conf 
 
 EXPOSE 11211
 CMD ["/data/run.sh"]
