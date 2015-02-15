@@ -1,5 +1,5 @@
 [program:memcached]
-command=/usr/bin/memcached -p 11211 -u root -m 256 -c 1024 -t 4
+command=/usr/bin/memcached -p 11211 -u memcached -m 256 -c 1024 -t 4
 autostart=true
 autorestart=true
 user=root
