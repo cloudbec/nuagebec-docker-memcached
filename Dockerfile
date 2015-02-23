@@ -8,7 +8,7 @@ RUN apt-get update && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-ADD supervisor_memcached.cond /etc/supervisor/conf.d/memcached.conf 
+ADD supervisor_memcached.conf /etc/supervisor/conf.d/memcached.conf 
 
 RUN mkdir /var/log/memcached/
 RUN useradd memcached
