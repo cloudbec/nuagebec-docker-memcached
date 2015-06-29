@@ -1,4 +1,4 @@
-FROM nuagebec/ubuntu:latest
+FROM nuagebec/ubuntu:14.04
 MAINTAINER David Tremblay <david@nuagebec.ca>
 
 #install memcached
